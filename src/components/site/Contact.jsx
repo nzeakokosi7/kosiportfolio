@@ -80,8 +80,9 @@ export default function Contact() {
 
       {/* Contact form */}
       <form
+        id="contact-form"
         onSubmit={handleSubmit}
-        className="relative mx-auto flex max-w-[520px] flex-col gap-[10px]"
+        className="relative mx-auto flex max-w-[520px] scroll-mt-24 flex-col gap-[10px]"
       >
         <div className="flex flex-col gap-[10px] min-[560px]:flex-row">
           <input

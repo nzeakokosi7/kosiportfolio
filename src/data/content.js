@@ -12,8 +12,8 @@ export const SITE = {
   blog: 'https://kosi-nzeako.hashnode.dev',
   email: 'hello@nzeakokosi.com',
   resumeUrl: '/resume.pdf',
-  // PLACEHOLDER: dead until the client supplies a personal booking link.
-  bookingUrl: '#contact',
+  // Until a real scheduling link exists, "Book 20 minutes" jumps to the form.
+  bookingUrl: '#contact-form',
   // Formspree form id (public — it ships in the client bundle either way).
   // Override with NEXT_PUBLIC_FORMSPREE_ID to rotate the form without a code change.
   formspreeId: process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xnpazqbl',

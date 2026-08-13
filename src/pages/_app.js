@@ -1,47 +1,30 @@
-// import NavBar from '@/components/NavBar';
-import '@/styles/globals.css';
-import { Inter, Nunito, Nunito_Sans, Public_Sans} from 'next/font/google'
-import { useState } from 'react';
- 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal'],
-})
+import '@/styles/globals.css'
+import { Public_Sans, IBM_Plex_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
-const nunito = Nunito(
-  {subsets: ['latin'],
-  variants: ['100', '200', '300', '400', '500', '600', '700', '800', '900',],
-  variable: '--font-nunito',
-  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal'],
-})
-
-
-const nunitoSans = Nunito_Sans(
-  {subsets: ['latin'],
-  variants: ['100', '200', '300', '400', '500', '600', '700', '800', '900',],
-  variable: '--font-nunito-sans',
-  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal'],
-})
-
+// Public Sans — all UI and display text.
 const publicSans = Public_Sans({
   subsets: ['latin'],
   variable: '--font-public-sans',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400', '500', '600', '700'],
   style: ['normal'],
+  display: 'swap',
 })
- 
+
+// IBM Plex Mono — all metadata: eyebrows, dates, badges, stack lines, code.
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  variable: '--font-ibm-plex-mono',
+  weight: ['400', '500'],
+  style: ['normal'],
+  display: 'swap',
+})
 
 export default function App({ Component, pageProps }) {
-  const [open, setOpen] = useState(false);
-
   return (
-    <main className={`${nunito.variable} ${publicSans.variable} ${inter.variable} ${nunitoSans.variable}  font-sans`}>
-    {/* <NavBar open={open} setOpen={setOpen} /> */}
-    <Component {...pageProps} />
+    <main className={`${publicSans.variable} ${ibmPlexMono.variable} font-sans`}>
+      <Component {...pageProps} />
+      <Analytics />
     </main>
   )
 }

@@ -14,8 +14,9 @@ export const SITE = {
   resumeUrl: '/resume.pdf',
   // PLACEHOLDER: dead until the client supplies a personal booking link.
   bookingUrl: '#contact',
-  // Formspree form id — set NEXT_PUBLIC_FORMSPREE_ID in the environment.
-  formspreeId: process.env.NEXT_PUBLIC_FORMSPREE_ID || '',
+  // Formspree form id (public — it ships in the client bundle either way).
+  // Override with NEXT_PUBLIC_FORMSPREE_ID to rotate the form without a code change.
+  formspreeId: process.env.NEXT_PUBLIC_FORMSPREE_ID || 'xnpazqbl',
   socials: {
     github: 'https://github.com/nzeakokosi7',
     linkedin: 'https://linkedin.com/in/nzeakokosi7',

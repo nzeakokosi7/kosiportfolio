@@ -75,7 +75,7 @@ export const RECENT_WORK = [
     when: 'Aug 24—Jul 26',
     role: 'Senior Android Engineer',
     blurb:
-      'Two years of senior Android delivery for a Lagos-based engineering team, remote — shared design-system and domain modules, and the review bar that keeps them usable.',
+      'Two years of senior Android engineering for Deimos, a South African cloud-native and DevOps consultancy — remote, working against shared design-system and domain modules and holding the review bar that keeps them usable.',
     stackText: 'Design systems',
     stackIcons: [
       { src: '/icons/kotlin.svg', label: 'Kotlin' },
@@ -124,7 +124,8 @@ export const TIMELINE = [
     date: 'Aug 24—Jul 26',
     company: 'Deimos',
     role: 'Senior Android Engineer',
-    blurb: 'Two years of senior Android delivery. Lagos, remote.',
+    blurb:
+      'Two years of senior Android delivery for Deimos, a South African cloud-native / DevOps consultancy. Remote.',
   },
   {
     date: 'Jan—Sep 2025',

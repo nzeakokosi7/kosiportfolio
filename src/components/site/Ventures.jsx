@@ -1,6 +1,23 @@
 import Glyph from './Glyph'
 import SwiftbonVignette from './SwiftbonVignette'
 import NwahiaVignette from './NwahiaVignette'
+import { SITE } from '@/data/content'
+
+function VentureLink({ href, name, accent }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`group inline-flex items-center gap-1 text-[19px] font-bold tracking-[-.025em] transition-colors ${accent}`}
+    >
+      {name}
+      <span className="font-mono text-[11px] font-normal text-ink/[.35] transition-colors group-hover:text-inherit">
+        ↗
+      </span>
+    </a>
+  )
+}
 
 function Metric({ value, label, color }) {
   return (
@@ -33,7 +50,7 @@ export default function Ventures() {
         <div className="grid grid-cols-1 min-[900px]:grid-cols-[1.05fr_.95fr]">
           <div className={`order-2 min-[900px]:order-none ${copyPad}`}>
             <div className="mb-4 flex flex-wrap items-center gap-3">
-              <span className="text-[19px] font-bold tracking-[-.025em]">Swiftbon</span>
+              <VentureLink href={SITE.swiftbonUrl} name="Swiftbon" accent="hover:text-lilac" />
               <span className="rounded-full bg-[rgba(229,24,255,.14)] px-[9px] py-1 font-mono text-[10px] tracking-[.04em] text-pink-badge">
                 Founder · pre-launch
               </span>
@@ -72,7 +89,7 @@ export default function Ventures() {
           <NwahiaVignette className="border-b border-ink/[.13] min-[900px]:border-b-0 min-[900px]:border-r" />
           <div className={copyPad}>
             <div className="mb-4 flex flex-wrap items-center gap-3">
-              <span className="text-[19px] font-bold tracking-[-.025em]">Nwahia</span>
+              <VentureLink href={SITE.nwahiaUrl} name="Nwahia" accent="hover:text-periwinkle" />
               <span className="rounded-full bg-[rgba(80,19,227,.24)] px-[9px] py-1 font-mono text-[10px] tracking-[.04em] text-periwinkle">
                 Founder · private beta · under Varscon
               </span>

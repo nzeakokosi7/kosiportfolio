@@ -11,6 +11,9 @@ export const SITE = {
   // this Hashnode publication, switch this one line (slugs stay the same).
   blog: 'https://kosi-nzeako.hashnode.dev',
   email: 'hello@nzeakokosi.com',
+  // Live product sites for the two ventures.
+  swiftbonUrl: 'https://swiftbon.ltd',
+  nwahiaUrl: 'https://nwahia.com',
   resumeUrl: '/resume.pdf',
   // Until a real scheduling link exists, "Book 20 minutes" jumps to the form.
   bookingUrl: '#contact-form',

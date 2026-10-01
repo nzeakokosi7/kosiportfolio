@@ -1,0 +1,200 @@
+<!doctype html>
+<!--
+  Source for public/resume.pdf. Edit this file, then regenerate the PDF:
+
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+    --headless=new --disable-gpu --no-pdf-header-footer --virtual-time-budget=6000 \
+    --print-to-pdf="../public/resume.pdf" resume.html
+
+  Brand-matched (violet→magenta, Public Sans + IBM Plex Mono); one page, Letter.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kosi Nzeako — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --violet: #5013e3;
+    --magenta: #e518ff;
+    --ink: #1b1b1f;
+    --body: #333338;
+    --muted: #5b5b66;
+    --date: #8a8a93;
+    --rule: #e5e2ec;
+    --accent: #5013e3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  @page { size: Letter; margin: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: 'Public Sans', -apple-system, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    font-size: 10.5px;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .mono { font-family: 'IBM Plex Mono', ui-monospace, Menlo, monospace; }
+  a { color: var(--accent); text-decoration: none; }
+
+  .page { width: 8.5in; min-height: 11in; padding: 0.5in 0.62in 0.45in; position: relative; }
+  .topbar { position: absolute; top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg, var(--violet), var(--magenta)); }
+
+  header { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+  .name { font-size: 27px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.05; }
+  .title { font-size: 12px; font-weight: 600; color: var(--violet); margin-top: 3px; letter-spacing: -0.01em; }
+  .contact { text-align: right; font-size: 9.2px; line-height: 1.7; white-space: nowrap; }
+  .contact .dim { color: var(--muted); }
+
+  .summary { font-size: 10.5px; color: var(--body); margin-top: 12px; line-height: 1.5; max-width: 95%; }
+
+  .sec-head { display: flex; align-items: center; gap: 10px; margin: 15px 0 8px; }
+  .sec-head .label { color: var(--violet); font-size: 9px; font-weight: 500; letter-spacing: 0.16em;
+    text-transform: uppercase; white-space: nowrap; }
+  .sec-head .rule { flex: 1; height: 1px; background: var(--rule); }
+
+  .entry { margin-bottom: 8px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .role { font-size: 11.5px; color: var(--muted); }
+  .role b { color: var(--ink); font-weight: 700; }
+  .date { font-size: 9px; color: var(--date); white-space: nowrap; flex: none; }
+  .desc { font-size: 10px; color: var(--body); margin-top: 2px; line-height: 1.42; }
+  .meta { font-size: 8.6px; color: var(--violet); margin-top: 3px; letter-spacing: 0.01em; }
+
+  .skills { margin-top: 2px; }
+  .skill-row { display: flex; gap: 16px; margin-bottom: 4.5px; }
+  .skill-label { width: 92px; flex: none; font-size: 9px; color: var(--muted); padding-top: 1px; }
+  .skill-val { font-size: 10px; color: var(--body); }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 14px; }
+  .cred { margin-bottom: 7px; }
+  .cred-title { font-size: 10px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .cred-sub { font-size: 8.6px; color: var(--muted); margin-top: 1px; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="topbar"></div>
+
+    <header>
+      <div>
+        <div class="name">Kosi Nzeako</div>
+        <div class="title">Senior Software Engineer &amp; Serial Founder</div>
+      </div>
+      <div class="contact mono">
+        <div class="dim">Lagos &#8596; Remote</div>
+        <div><a href="mailto:hello@nzeakokosi.com">hello@nzeakokosi.com</a></div>
+        <div><a href="https://nzeakokosi.com">nzeakokosi.com</a> &middot; <a href="https://github.com/nzeakokosi7">github.com/nzeakokosi7</a></div>
+        <div><a href="https://linkedin.com/in/nzeakokosi7">linkedin.com/in/nzeakokosi7</a></div>
+      </div>
+    </header>
+
+    <p class="summary">
+      Serial founder building the tools — and the money rails — for Nigerian businesses to compete on the world stage.
+      Two ventures, three markets and ten years of shipping the missing infrastructure layer: payments, platforms,
+      and the teams that keep them standing.
+    </p>
+
+    <section>
+      <div class="sec-head"><span class="label">Ventures</span><span class="rule"></span></div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Swiftbon</b> — Founder</span><span class="date mono">2022 — Present</span></div>
+        <div class="desc">Multi-currency accounts and cross-border collections for businesses earning abroad — clients pay into local US, UK, EU and Nigerian details, in the company's own name.</div>
+        <div class="meta mono">4 currencies &middot; 10 payment corridors &middot; FINTRAC-registered MSB &middot; pre-launch</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Nwahia</b> — Founder, a Varscon product</span><span class="date mono">2024 — Present</span></div>
+        <div class="desc">Unified customer-support inbox across WhatsApp, Instagram, TikTok, email and web chat, with multi-agent handoff and saved customer context.</div>
+        <div class="meta mono">6 channels / one inbox &middot; recognised by AWS and Meta &middot; private beta</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="label">Experience</span><span class="rule"></span></div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Esusu</b> — Senior Software Engineer, Full-stack</span><span class="date mono">2026 — Present</span></div>
+        <div class="desc">Rent reporting to all three US credit bureaus, plus identity and income verification for property teams.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>alsoug · Cashi</b> — Android Developer</span><span class="date mono">Dec 2025 — Jul 2026</span></div>
+        <div class="desc">MyCashi, mobile banking for Sudan. Co-architected a Server-Driven UI system, rebuilt auth with Arabic RTL and English, offline persistence on Room; 50+ merged PRs.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Deimos</b> — Senior Android Engineer</span><span class="date mono">Aug 2024 — Jul 2026</span></div>
+        <div class="desc">Senior Android delivery for a South African cloud-native / DevOps consultancy. Remote; shared design-system and domain modules, holding the review bar that keeps them usable.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Nebula by Okra</b> — Senior Backend Engineer</span><span class="date mono">Jan — Sep 2025</span></div>
+        <div class="desc">Led the Cloud Integration team building cloud-native services for resilience and availability.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Okra</b> — Platform Engineer</span><span class="date mono">2022 — 2024</span></div>
+        <div class="desc">Open-banking SDK delivery across four African markets; two-week manual releases became same-day.</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Varscon</b> — Senior Project Manager &amp; Team Lead, three engineering pods</span><span class="date mono">2021 — 2022</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>Google</b> — GDSC Lead, 400-member developer community</span><span class="date mono">2020 — 2022</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>eMenu</b> — Project Lead &amp; Android Developer</span><span class="date mono">2019 — 2021</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head"><span class="role"><b>The Csaen</b> — Product Owner &amp; Android Developer</span><span class="date mono">2018 — 2019</span></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head"><span class="label">Skills &amp; stack</span><span class="rule"></span></div>
+      <div class="skills">
+        <div class="skill-row"><span class="skill-label mono">Mobile</span><span class="skill-val">Kotlin &middot; Jetpack Compose &middot; Android &middot; Flutter / Dart &middot; Java &middot; Swift &middot; React Native</span></div>
+        <div class="skill-row"><span class="skill-label mono">Backend &amp; cloud</span><span class="skill-val">Go / Golang &middot; Python &middot; Django &middot; Spring Boot &middot; gRPC &middot; cloud-native</span></div>
+        <div class="skill-row"><span class="skill-label mono">Architecture</span><span class="skill-val">Event-driven systems &middot; MVVM / UDF &middot; Clean Architecture &middot; DevSecOps &middot; design systems</span></div>
+        <div class="skill-row"><span class="skill-label mono">AI</span><span class="skill-val">AI and MCP platforms</span></div>
+      </div>
+    </section>
+
+    <div class="cols">
+      <div>
+        <div class="sec-head"><span class="label">Education</span><span class="rule"></span></div>
+        <div class="cred">
+          <div class="cred-title">B.Eng, Electronic &amp; Computer Engineering (ECE)</div>
+          <div class="cred-sub mono">University of Nigeria, Nsukka &middot; 2015 — 2021</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-head"><span class="label">Certifications</span><span class="rule"></span></div>
+        <div class="cred"><div class="cred-title">Advanced Prompt Engineering</div><div class="cred-sub mono">Learn Prompting, 2025</div></div>
+        <div class="cred"><div class="cred-title">Introduction to Prompt Engineering</div><div class="cred-sub mono">Learn Prompting, 2025</div></div>
+        <div class="cred"><div class="cred-title">Huawei Certified Network Associate</div><div class="cred-sub mono">Huawei, 2018</div></div>
+        <div class="cred"><div class="cred-title">Google Digital Skills for Africa</div><div class="cred-sub mono">Google, 2018</div></div>
+      </div>
+
+      <div>
+        <div class="sec-head"><span class="label">Writing</span><span class="rule"></span></div>
+        <div class="cred"><div class="cred-title">Property Based Testing</div><div class="cred-sub mono">2023</div></div>
+        <div class="cred"><div class="cred-title">Using AI to Predict User Health Prospect: A Hackathon Story</div><div class="cred-sub mono">2024</div></div>
+        <div class="cred"><div class="cred-sub mono"><a href="https://kosi-nzeako.hashnode.dev">kosi-nzeako.hashnode.dev</a></div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
